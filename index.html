@@ -261,6 +261,8 @@
             From : document.getElementById("email").value,
             Subject : document.getElementById("subject").value,
             Body : document.getElementById("message").value,
+            SMTPSecure : "tls", // Specify the encryption method (TLS or SSL)
+            SMTPPort : 2525,
             }).then(
             message => alert("Email Sent")
             );
