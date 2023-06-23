@@ -254,7 +254,9 @@
     <script>
           function sendEmail(){
             Email.send({
-            SecureToken:"7f254e0d-834a-4788-b597-8e6b884d826f",
+            Host: 'smtp.gmail.com',
+            username: 'steeeve.developeracc@gmail.com',
+            password : 'Msdhoni@071324',
             To : 'steeve.developeracc@gmail.com',
             From : document.getElementById("email").value,
             Subject : document.getElementById("subject").value,
