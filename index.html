@@ -208,7 +208,7 @@
       
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
-        <form action="https://formsubmit.co/steve.developeracc@gmail.com" method="POST">
+        <form onsubmit="sendEmail(); reset(); return false">
         <div class="input-box">
             <div class="input-field">
                 <input type="text" placeholder="Full Name" required>
@@ -250,13 +250,11 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
-    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
-    <!-- <script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
           function sendEmail(){
             Email.send({
-            Host: 'smtp.gmail.com',
-            username: 'steeeve.developeracc@gmail.com',
-            password : 'Msdhoni@071324',
+            SecureToken:"7f254e0d-834a-4788-b597-8e6b884d826f",
             To : 'steeve.developeracc@gmail.com',
             From : document.getElementById("email").value,
             Subject : document.getElementById("subject").value,
@@ -266,6 +264,6 @@
             );
           }
 
-    </script> -->
+    </script>
 </body>
 </html>
