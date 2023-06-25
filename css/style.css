@@ -86,7 +86,8 @@ section {
     position: relative;
     padding: 6rem 9%;
     margin-top: 80px;
-    background: linear-gradient(to right, var(--bg-color), var(--bg-color) 15%, transparent), url('../images/profile.jpg') no-repeat;
+    background: linear-gradient(to right, var(--bg-color), var(--bg-color) 15%, transparent), url('/images/profile.jpg') no-repeat;
+
     background-size: cover;
     background-position: right;
 }
