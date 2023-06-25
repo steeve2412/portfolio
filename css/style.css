@@ -758,6 +758,11 @@ span{
           text-align: center;
         }
       }
+      .about-img .circle-spin {
+        position: static;
+        transform: none;
+        margin-top: 2rem;
+      }
 }
 
 @media (max-width: 520px){
