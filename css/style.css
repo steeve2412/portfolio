@@ -867,60 +867,37 @@ span{
 /* PROJECTS SECTION */
 
 #projects {
-    height: 98vh;
-  }
-  
-  .carousel-container {
+    height: auto; /* Adjust the height as needed */
+}
+
+.carousel-container {
     position: relative;
     max-width: 100%;
-    height: auto;
+    height: auto; /* Adjust the height as needed */
     margin: 0 auto;
-  }
-  
-  .carousel-slide {
+}
+
+.carousel-slide {
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
     transition: opacity 0.5s ease;
-    width: 100%; /* Adjust to fit the container width */
-    height: auto; /* Adjust to fit the container height */
-  }
-  
-  .carousel-slide img {
-    border: 2px solid rgb(255, 255, 255);
     width: 100%;
-    height: auto;
+    height: auto; /* Adjust the height as needed */
+}
+
+/* Adjust the height and width of project images */
+.carousel-slide img {
+    border: 2px solid rgb(255, 255, 255);
+    width: 100%; /* Adjust the width to fit your container */
+    height: auto; /* Adjust the height as needed */
     border-bottom-left-radius: 24px;
     border-bottom-right-radius: 24px;
-  }
-  
-  /* Style the previous and next buttons */
-  #prevBtn,
-#nextBtn {
-  margin: 16px;
-  width: 40px;
-  height: 40px;
-  background-color: var(--main-color);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s, color 0.3s;
 }
 
-#prevBtn::before {
-  content: '<'; /* Left arrow character */
-}
-
-#nextBtn::before {
-  content: '>'; /* Right arrow character */
-}
-  .rectangle {
+/* Add spacing and styling for project descriptions */
+.rectangle {
     position: relative;
     margin: 0 auto;
     width: 100%;
@@ -935,49 +912,40 @@ span{
     border-top: 2px solid rgb(255, 255, 255);
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
-  }
-  
-  .btn-div {
+}
+
+.btn-div {
     display: flex;
     justify-content: space-between;
-  }
-  
-  .txt-div {
+}
+
+.txt-div {
     display: flex;
     flex-direction: row;
     place-content: center;
-  }
-  
-  .projects_p1 {
+}
+
+.projects_p1 {
     text-align: left;
     color: rgb(255, 255, 255);
     padding-left: 16px;
     font-size: 1.8rem;
-  }
-  
-  .projects_p2 {
+}
+
+.projects_p2 {
     text-align: left;
     color: rgb(255, 255, 255);
     padding: 16px;
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.2;
-  }
-  
-  .projects_p3 {
+}
+
+.projects_p3 {
     text-align: left;
     color: rgb(32, 211, 145);
     padding-left: 16px;
     padding-top: 4px;
     font-size: 1.2rem;
     font-weight: 500;
-  }
-  
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    z-index: 2;
-  }
-
-  #extra-courses {
-    margin-bottom: 20px; /* Adjust this value as needed to control the spacing */
-  }
+}
