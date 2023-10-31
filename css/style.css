@@ -949,3 +949,36 @@ span{
     font-size: 1.2rem;
     font-weight: 500;
 }
+.extra-courses {
+    text-align: center;
+    padding: 20px; /* Adjust padding as needed */
+  }
+  
+  /* Apply consistent styles for "projects" section */
+  #projects {
+    text-align: center;
+    padding: 20px; /* Adjust padding as needed */
+  }
+  
+  #projects .rectangle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px; /* Adjust margin as needed */
+  }
+  
+  #projects .carousel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #projects .carousel-slide {
+    margin: 10px; /* Adjust margin as needed */
+  }
+  
+  #projects img {
+    max-width: 100%;
+    height: auto;
+  }
+  
