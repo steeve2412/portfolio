@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SkillCode Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">Steeve <span class="animate" style="--i:1;"></span></a>
+
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+
+        <span class="active-nav">
+        <span class="animate" style="--i:2;"></span>
+        </span>
+    </nav>
+</header>
+  <section class="about" id="about">
+    <div class="about-content">
+      <h2 class="heading">What <span>I Learned</span></h2>
+      <p>My journey at Skill Code Hub was my inaugural foray into the tech industry. It was here that I understood the dynamic synergy between theoretical knowledge and its practical application.
+
+        Working closely with experienced developers, I learned the art of selecting the most suitable technologies for various projects. This skill, of knowing what tech fits where, is more than just a time-saver; it's a money-saver too. I understood that choosing the right tech stack is akin to selecting the right tools for a craftsman, and it plays a pivotal role in the outcome of any project.
+        
+        Moreover, my tenure at Skill Code Hub fostered personal and professional growth. I honed the ability to be a keen listener. When clients communicate their ideas, it's imperative to understand their vision comprehensively. Being an astute listener allows me to not just hear but truly comprehend the client's perspective. This skill enhances client satisfaction and ensures that their vision is accurately translated into reality.
+        
+        Teamwork, another cornerstone of my experience, taught me the intricacies of collaborating effectively with diverse teams. It's more than just a word; it's a mindset. It's about harmonizing with teammates, respecting their perspectives, and ensuring that everyone's contributions synergize seamlessly.
+        
+        Lastly, my time management skills blossomed during this phase. Organizing daily tasks, tracking project progress, and ensuring that each day's work contributed to the overarching project goals became second nature.
+        
+        In essence, Skill Code Hub was more than just a professional experience; it was a transformative journey that fortified my technical acumen, amplified my interpersonal skills, and laid the foundation for a successful career in the software development field.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h1 class="heading">Projects</h1>
+    </br></br>
+
+    <div class="rectangle">
+      <div class="txt-div">
+        <p class="projects_p1" id="project_title_txt">CYFO ANTI-HACK APP</p>
+        <a href="https://github.com/steeve2412/FlutterNetflixClone" id="project_link_txt">
+          <p class="projects_p3" id="project_link_btn">View Code</p>
+        </a>
+      </div>
+      <div class="btn-div">
+        <button id="prevBtn"><i class="fa fa-arrow-left fa-lg"></i></button>
+        <button id="nextBtn"><i class="fa fa-arrow-right fa-lg"></i></button>
+      </div>
+    </div>
+
+    <div class="carousel-container">
+      <div class="image-container">
+        <div class="carousel-slide">
+          <img src="./assets/Project_3.png" alt="project 1">
+        </div>
+        <div class="carousel-slide">
+          <img src="./assets/Project_2.png" alt="project 2">
+        </div>
+       <div class="carousel-slide">
+          <img src="./assets/Project_1.png" alt="project 3">
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".certificates-container .slider-container").owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: true,
+        navText: ['&lt;', '&gt;'],
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 3
+          },
+          1000: {
+            items: 5
+          }
+        },
+        onInitialized: updateCenterCertificate,
+        onTranslated: updateCenterCertificate
+      });
+
+      function updateCenterCertificate(event) {
+        $(".certificates-container .slider-container .item").removeClass("center");
+        const centerIndex = Math.floor(event.item.index - event.item.count / 2);
+        $(".certificates-container .slider-container .owl-item").eq(centerIndex).addClass("center");
+      }
+    });
+  </script>
+  <script>
+    const projectCards = document.querySelectorAll('.project-card');
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+let activeCardIndex = 0;
+
+function showCard(index) {
+  projectCards.forEach(card => card.classList.remove('active'));
+  projectCards[index].classList.add('active');
+}
+
+leftArrow.addEventListener('click', () => {
+  activeCardIndex--;
+  if (activeCardIndex < 0) {
+    activeCardIndex = projectCards.length - 1;
+  }
+  showCard(activeCardIndex);
+});
+
+rightArrow.addEventListener('click', () => {
+  activeCardIndex++;
+  if (activeCardIndex >= projectCards.length) {
+    activeCardIndex = 0;
+  }
+  showCard(activeCardIndex);
+});
+
+showCard(activeCardIndex);
+  </script>
+  <script>
+    function toggleMenu() {
+    const menu = document.querySelector(".menu-links");
+    const icon = document.querySelector(".hamburger-icon");
+    menu.classList.toggle("open");
+    icon.classList.toggle("open");
+}
+
+const carouselContainer = document.querySelector(".carousel-container");
+const slides = document.querySelectorAll(".carousel-slide");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const titleTxt = document.getElementById("project_title_txt");
+const linkTxt = document.getElementById("project_link_txt");
+const linkBtn = document.getElementById("project_link_btn");
+
+let slideIndex = 0;
+
+function showSlide(index) {
+    if (index >= slides.length) {
+        slideIndex = 0;
+    } else if (index < 0) {
+        slideIndex = slides.length - 1;
+    }
+
+    // Fade out the current image
+    slides.forEach((slide) => {
+        slide.style.opacity = 0;
+    });
+
+    // Fade in the next image
+    slides[slideIndex].style.opacity = 1;
+}
+
+function nextSlide() {
+    slideIndex++;
+    showSlide(slideIndex);
+    getProjectData(slideIndex);
+}
+
+function prevSlide() {
+    slideIndex--;
+    showSlide(slideIndex);
+    getProjectData(slideIndex);
+}
+
+function getProjectData(index) {
+    var projectName = '';
+    var projectLink = '';
+    var btnName = '';
+    switch (index) {
+        case 0:
+            projectName = 'Streamify';
+            projectLink = 'https://github.com/steeve2412/FlutterNetflixClone';
+            btnName = 'View Code';
+            break;
+        case 1:
+            projectName = 'Trendsphere';
+            projectLink = 'https://github.com/steeve2412/FlutterApp';
+            btnName = 'View Code';
+            break;
+        case 2:
+            projectName = 'StyleSphere';
+            projectLink = 'https://github.com/steeve2412/FlutterSampleApp';
+            btnName = 'View Code';
+            break;
+        default:
+            projectName = '';
+            projectLink = '';
+            btnName = '';
+            break;
+    }
+    titleTxt.textContent = projectName;
+    linkTxt.href = projectLink;
+    linkBtn.textContent = btnName;
+}
+
+
+showSlide(slideIndex);
+
+nextBtn.addEventListener("click", nextSlide);
+prevBtn.addEventListener("click", prevSlide);
+
+// Auto-change every 7 second
+setInterval(nextSlide, 7000);
+  </script>
+</body>
+</html>

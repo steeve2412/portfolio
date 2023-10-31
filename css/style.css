@@ -26,6 +26,7 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
+    overflow-y: scroll;
 }
 
 .header {
@@ -309,21 +310,20 @@ span{
     justify-content: center;
     align-items: center;
     padding: 1rem;
-}
+  }
 
-.about-img img {
+  .about-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Maintain the aspect ratio and cover the entire container */
+    object-fit: cover;
     border-radius: 50%;
     border: .2rem solid var(--main-color);
-}
-
-.about-img .circle-spin{
+  }
+  .about-img .circle-spin {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0);
+    top: 0;
+    left: 0;
+    transform-origin: center center;
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -332,7 +332,8 @@ span{
     border-left: 0.2rem solid var(--main-color);
     border-right: 0.2rem solid var(--main-color);
     animation: aboutSpinner 8s linear infinite;
-}
+  }
+  
 
 .about-content{
     text-align: center;
@@ -757,12 +758,17 @@ span{
         .title {
           text-align: center;
         }
+        .about-img {
+            width: 18rem;
+            height: 18rem;
+          }
+        .about-img .circle-spin {
+            position: relative;
+            transform: none;
+            margin-top: 2rem;
+        }
       }
-      .about-img .circle-spin {
-        position: static;
-        transform: none;
-        margin-top: 2rem;
-      }
+
 }
 
 @media (max-width: 520px){
@@ -845,13 +851,129 @@ span{
 }
 
 @keyframes aboutSpinner {
-    100%{
-        transform: translate(-50%, -50%) rotate(360deg);
+    0% {
+      transform: rotate(0);
     }
-}
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
 @keyframes showRight{
     100%{
         width: 0;
     }
 }
+/* PROJECTS SECTION */
+
+#projects {
+    height: 98vh;
+  }
+  
+  .carousel-container {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    width: 100%; /* Adjust to fit the container width */
+    height: auto; /* Adjust to fit the container height */
+  }
+  
+  .carousel-slide img {
+    border: 2px solid rgb(255, 255, 255);
+    width: 100%;
+    height: auto;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+  }
+  
+  /* Style the previous and next buttons */
+  #prevBtn,
+#nextBtn {
+  margin: 16px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#prevBtn::before {
+  content: '<'; /* Left arrow character */
+}
+
+#nextBtn::before {
+  content: '>'; /* Right arrow character */
+}
+  .rectangle {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    background-color: rgb(32, 37, 43);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+    border-top: 2px solid rgb(255, 255, 255);
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+  }
+  
+  .btn-div {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .txt-div {
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+  }
+  
+  .projects_p1 {
+    text-align: left;
+    color: rgb(255, 255, 255);
+    padding-left: 16px;
+    font-size: 1.8rem;
+  }
+  
+  .projects_p2 {
+    text-align: left;
+    color: rgb(255, 255, 255);
+    padding: 16px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  
+  .projects_p3 {
+    text-align: left;
+    color: rgb(32, 211, 145);
+    padding-left: 16px;
+    padding-top: 4px;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    z-index: 2;
+  }

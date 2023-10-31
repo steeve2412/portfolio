@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>University of Windsor</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <style>
+   .certificates-container .slider-container .owl-item {
+      transition: transform 0.3s ease;
+    }
+
+    .certificates-container .slider-container .owl-item.center {
+      transform: scale(1.2);
+    }
+
+    .certificates-container .slider-container .owl-item .item-content {
+      background: none; /* Remove the background color */
+      padding: 0; /* Remove the padding */
+    }
+
+    .certificates-container .slider-container .owl-item.center .item-content {
+      transform: scale(1.4); /* Increase the scale for the centered certificate */
+    }
+
+    .certificates-container .slider-container .owl-item .item-content img {
+      width: 400px;
+      height: 400px;
+      padding: 20px;
+    }
+    .certificates-container .slider-container .owl-item .item-content:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+  </style>
+  
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">Steeve <span class="animate" style="--i:1;"></span></a>
+
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+
+        <span class="active-nav">
+        <span class="animate" style="--i:2;"></span>
+        </span>
+    </nav>
+</header>
+  <section class="about" id="about">
+    <div class="about-content">
+      <h2 class="heading">What <span>I Learned</span></h2>
+      <p>During my time at the University of Windsor, I pursued a Master of Applied Computing degree, specializing in Artificial Intelligence. This academic journey broadened my horizons and equipped me with valuable skills and knowledge. I delved into advanced subjects such as Software Engineering, System Programming, and Data Technologies.
+
+        Coming as an international student, this experience offered me a unique opportunity to collaborate with diverse groups of people. It significantly enhanced my teamwork and leadership skills, enabling me to work effectively with individuals from various cultural backgrounds.
+        
+        My experience at the University of Windsor has been instrumental in shaping my career as a software developer. It laid the foundation for my technical expertise and problem-solving abilities, allowing me to excel in various software-related projects and endeavors.
+      </p>
+    </div>
+  </section>
+
+  <section class="extra-courses">
+    <h2 class="heading">Courses Taken for Extra Learning</h2>
+    <div id="certificates" class="certificates-container">
+      <div class="slider-container owl-carousel owl-theme">
+        <div class="item">
+          <div class="item-content">
+            <a href="https://www.linkedin.com/learning/certificates/1f7cd63230ac3f130f6f6f5b61d148745995ca6e19df6438b5561f065306a8a5" target="_blank">
+              <img src="Linkedin_Certifications/Unix-Certificate.jpg" alt="Certificate 1">
+            </a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-content">
+            <a href="https://www.linkedin.com/learning/certificates/51ed26234ebc652dd86daeef5d104f9579b2c84af1bd13f583bd3a09e642eaa4" target="_blank">
+              <img src="Linkedin_Certifications/Hadoop.jpg" alt="Certificate 2">
+            </a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-content">
+            <a href="https://www.linkedin.com/learning/certificates/1dc660543aeee2cbc5e93877f7bc670945b15ec79efb123f7fe68147c5852690" target="_blank">
+              <img src="Linkedin_Certifications/SQL&DataFrames.jpg" alt="Certificate 3">
+            </a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-content">
+            <a href="https://www.linkedin.com/learning/certificates/c998524a425d835f5e62205bbaf655d6a06b854e87ba866cfe7d146528396a45" target="_blank">
+              <img src="Linkedin_Certifications/Python.jpg" alt="Certificate 4">
+            </a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-content">
+            <a href="https://www.linkedin.com/learning/certificates/be613689b51b6c5bdfc0b8c66b8135be89966835ea0d7d70c47f9ade8447a721" target="_blank">
+              <img src="Linkedin_Certifications/Python(2).jpg" alt="Certificate 5">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="projects">
+    <h1 class="heading">Projects</h1>
+    </br></br>
+
+    <div class="rectangle">
+      <div class="txt-div">
+        <p class="projects_p1" id="project_title_txt">CYFO ANTI-HACK APP</p>
+        <a href="https://github.com/steeve2412/Django_Final_Adventure" id="project_link_txt">
+          <p class="projects_p3" id="project_link_btn">View Code</p>
+        </a>
+      </div>
+      <div class="btn-div">
+        <button id="prevBtn"><i class="fa fa-arrow-left fa-lg"></i></button>
+        <button id="nextBtn"><i class="fa fa-arrow-right fa-lg"></i></button>
+      </div>
+    </div>
+
+    <div class="carousel-container">
+      <div class="image-container">
+        <div class="carousel-slide">
+          <img src="./assets/Project_4.png" alt="project 1">
+        </div>
+        <div class="carousel-slide">
+          <img src="./assets/Project_9.png" alt="project 2">
+        </div>
+       <div class="carousel-slide">
+          <img src="./assets/Project_5.png" alt="project 3">
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".certificates-container .slider-container").owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: true,
+        navText: ['&lt;', '&gt;'],
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 3
+          },
+          1000: {
+            items: 5
+          }
+        },
+        onInitialized: updateCenterCertificate,
+        onTranslated: updateCenterCertificate
+      });
+
+      function updateCenterCertificate(event) {
+        $(".certificates-container .slider-container .item").removeClass("center");
+        const centerIndex = Math.floor(event.item.index - event.item.count / 2);
+        $(".certificates-container .slider-container .owl-item").eq(centerIndex).addClass("center");
+      }
+    });
+  </script>
+  <script>
+    const projectCards = document.querySelectorAll('.project-card');
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+let activeCardIndex = 0;
+
+function showCard(index) {
+  projectCards.forEach(card => card.classList.remove('active'));
+  projectCards[index].classList.add('active');
+}
+
+leftArrow.addEventListener('click', () => {
+  activeCardIndex--;
+  if (activeCardIndex < 0) {
+    activeCardIndex = projectCards.length - 1;
+  }
+  showCard(activeCardIndex);
+});
+
+rightArrow.addEventListener('click', () => {
+  activeCardIndex++;
+  if (activeCardIndex >= projectCards.length) {
+    activeCardIndex = 0;
+  }
+  showCard(activeCardIndex);
+});
+
+showCard(activeCardIndex);
+  </script>
+  <script>
+    function toggleMenu() {
+    const menu = document.querySelector(".menu-links");
+    const icon = document.querySelector(".hamburger-icon");
+    menu.classList.toggle("open");
+    icon.classList.toggle("open");
+}
+
+const carouselContainer = document.querySelector(".carousel-container");
+const slides = document.querySelectorAll(".carousel-slide");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const titleTxt = document.getElementById("project_title_txt");
+const linkTxt = document.getElementById("project_link_txt");
+const linkBtn = document.getElementById("project_link_btn");
+
+let slideIndex = 0;
+
+function showSlide(index) {
+    if (index >= slides.length) {
+        slideIndex = 0;
+    } else if (index < 0) {
+        slideIndex = slides.length - 1;
+    }
+
+    // Fade out the current image
+    slides.forEach((slide) => {
+        slide.style.opacity = 0;
+    });
+
+    // Fade in the next image
+    slides[slideIndex].style.opacity = 1;
+}
+
+function nextSlide() {
+    slideIndex++;
+    showSlide(slideIndex);
+    getProjectData(slideIndex);
+}
+
+function prevSlide() {
+    slideIndex--;
+    showSlide(slideIndex);
+    getProjectData(slideIndex);
+}
+
+function getProjectData(index) {
+    var projectName = '';
+    var projectLink = '';
+    var btnName = '';
+    switch (index) {
+        case 0:
+            projectName = 'Adventure Island';
+            projectLink = 'https://github.com/steeve2412/Django_Final_Adventure';
+            btnName = 'View Code';
+            break;
+        case 1:
+            projectName = 'Airifier';
+            projectLink = 'https://github.com/steeve2412/ASE_Project_Group-2';
+            btnName = 'View Code';
+            break;
+        case 2:
+            projectName = 'KeyStorke Dynamics';
+            projectLink = 'https://github.com/steeve2412/IP2Project';
+            btnName = 'View Code';
+            break;
+        default:
+            projectName = '';
+            projectLink = '';
+            btnName = '';
+            break;
+    }
+    titleTxt.textContent = projectName;
+    linkTxt.href = projectLink;
+    linkBtn.textContent = btnName;
+}
+
+
+showSlide(slideIndex);
+
+nextBtn.addEventListener("click", nextSlide);
+prevBtn.addEventListener("click", prevSlide);
+
+// Auto-change every 7 second
+setInterval(nextSlide, 7000);
+  </script>
+</body>
+</html>
