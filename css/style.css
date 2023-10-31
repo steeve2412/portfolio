@@ -977,4 +977,12 @@ span{
   .carousel-control-next-icon {
     z-index: 2;
   }
+
+  #extra-courses {
+    margin-bottom: 20px; /* Adjust this value as needed to control the spacing */
+  }
+  
+  #projects {
+    margin-top: 20px; /* Adjust this value as needed to control the spacing */
+  }
   
