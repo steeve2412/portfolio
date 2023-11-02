@@ -514,6 +514,7 @@ span{
 }
 
 .contact {
+    padding-top: 550px;
     min-height: auto;
     padding-bottom: 7rem;
     justify-content: center;
@@ -589,6 +590,49 @@ span{
 .contact form .btn-box.btns .btn{
     cursor: pointer;
 }
+/* Responsive styles for tablets and smaller screens */
+@media (max-width: 1200px) {
+    .contact {
+        padding-top: 450px;
+    }
+}
+
+/* Responsive styles for screens around 991px wide */
+@media (max-width: 991px) {
+    .contact {
+        padding-top: 200px;
+    }
+}
+
+/* Responsive styles for screens around 768px wide */
+@media (max-width: 768px) {
+    .contact {
+        padding-top: 100px;
+        padding-bottom: 3rem;
+    }
+}
+
+/* Responsive styles for screens around 520px wide */
+@media (max-width: 520px) {
+    .contact {
+        padding-top: 0.2px;
+    }
+}
+
+/* Responsive styles for screens around 462px wide */
+@media (max-width: 462px) {
+    .contact {
+        padding-top: -10px;
+    }
+}
+
+/* Responsive styles for screens around 371px wide */
+@media (max-width: 371px) {
+    .contact {
+        padding-top: 0px;
+    }
+}
+
 
 .footer{
     display: flex;
@@ -949,6 +993,49 @@ span{
     font-size: 1.2rem;
     font-weight: 500;
 }
+.projects_p4 {
+    text-align: left;
+    color: rgb(255, 255, 255);
+    padding-left: 16px;
+    font-size: 1.8rem;
+}
+
+.projects_p5 {
+    text-align: left;
+    color: rgb(255, 255, 255);
+    padding-left: 16px;
+    font-size: 1.8rem;
+}
+
+.projects_p6 {
+    text-align: left;
+    color: rgb(255, 255, 255);
+    padding-left: 16px;
+    font-size: 1.8rem;
+}
+
+.projects_p7 {
+    text-align: left;
+    color: rgb(255, 255, 255);
+    padding-left: 16px;
+    font-size: 1.8rem;
+}
+
+.projects_p8 {
+    text-align: left;
+    color: rgb(255, 255, 255);
+    padding-left: 16px;
+    font-size: 1.8rem;
+}
+
+.projects_p9 {
+    text-align: left;
+    color: rgb(255, 255, 255);
+    padding-left: 16px;
+    font-size: 1.8rem;
+}
+
+
 .extra-courses {
     text-align: center;
     padding: 20px; /* Adjust padding as needed */
@@ -981,4 +1068,16 @@ span{
     max-width: 100%;
     height: auto;
   }
-  
+  #prevBtn,
+#nextBtn {
+  margin: 16px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--main-color);
+  background-color: white;
+  color: var(--main-color);
+  border-radius: 40px; 
+  box-shadow: none;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
